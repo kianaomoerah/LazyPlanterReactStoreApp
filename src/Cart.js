@@ -1,11 +1,8 @@
-
-import { useState } from "react";
-
 const Cart = (props) => {
 
     return (
         <>
-            <p>{props.cartTotal}</p>
+            <div>{props.cartTotal}</div>
         </>
 
     )

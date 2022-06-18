@@ -3,8 +3,9 @@ import './App.css';
 import {useEffect, useState} from 'react';
 import {getDatabase, ref, onValue} from 'firebase/database'
 import firebase from './firebase.js';
+import Header from './Header';
 import Inventory from './Inventory';
-import Cart from './Cart';
+// import Cart from './Cart';
 
 function App() {
 
@@ -33,20 +34,35 @@ function App() {
 
   const [cartTotal, setCartTotal ] = useState(0)
 
+  const [plantStock, setPlantStock] = useState("10")
+
   const addToCart = () => {
 
-    console.log("added to cart")
-    setCartTotal(cartTotal + 1)
+        if (plantStock > 0) {
 
-  }
+            setPlantStock(plantStock - 1)
+
+            setCartTotal(cartTotal + 1)
+        }
+    }
+
+  // const addToCart = () => {
+
+  //   console.log("added to cart")
+  //   setCartTotal(cartTotal + 1)
+
+  // }
   
 
   return (
-    <ul className="App">
-      <Cart />
-      <div>{cartTotal}</div>
-      <Inventory plants={plants} addToCart={addToCart} />        
-    </ul>
+      <>
+        <Header />
+        {/* <Cart /> */}
+        <p>{cartTotal}</p>
+        <ul>
+          <Inventory plants={plants} addToCart={addToCart} />        
+        </ul>
+      </>
   );
 }
 
