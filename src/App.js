@@ -55,11 +55,9 @@ function App() {
 
   return (
       <>
-
         <Header />
         <Cart cart={cart} setCart={setCart} cartTotal ={cartTotal} setCartTotal={setCartTotal}/>
         <Inventory plants={plants} addToCart={addToCart} cart={cart}/>   
-
       </>
   );
 }

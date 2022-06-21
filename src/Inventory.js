@@ -4,7 +4,7 @@ const Inventory = (props) => {
 
     return (
 
-        <>
+        <div className="wrapper">
 
         <h2>Shop our collection!</h2>
             <ul>
@@ -30,7 +30,7 @@ const Inventory = (props) => {
             }
 
             </ul>
-        </>
+        </div>
     )
 }
 

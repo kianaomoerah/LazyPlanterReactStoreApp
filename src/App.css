@@ -12,6 +12,12 @@ body {
   font-size: 125%;
 }
 
+.wrapper {
+  max-width: 1600px;
+  width: 95%;
+  margin: 0 auto;
+}
+
 ul {
   display: flex;
   flex-wrap: wrap;
@@ -26,7 +32,6 @@ ol {
 }
 
 header {
-  /* background: #5c7160; */
   display: flex;
   background-image: url(https://images.unsplash.com/photo-1559761132-5952db82b3e3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80);
   height: 45vh;
@@ -37,13 +42,13 @@ header {
   border: 2px black solid;
   width: 75%;
   margin: 0 auto;
+  padding: 25px;
   align-self: center;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-h1,
 h2 {
   color: #c9b9a4;
 }
@@ -52,17 +57,20 @@ h1 {
   margin: 0;
   font-size: 4rem;
   font-family: 'BenchNine', sans-serif;
+  color: #5c7160;
 }
 
 h2 {
   font-size: 1.5rem;
-  font-family: 'Roboto Mono', smonospace;
+  font-family: 'Roboto Mono', monospace;
   text-align: center;
+  margin: 0;
 }
 
 h3 {
   font-size: 1.25rem;
-  font-family: 'Roboto Mono', smonospace;
+  font-family: 'Roboto Mono', monospace;
+  text-align: center;
 }
 
 p {
@@ -86,10 +94,12 @@ button {
   color: white;
   background-color: black;
   padding: 10px;
+  font-family: 'Roboto Mono', monospace;
 }
 
-button:hover {
-  background-color: green;  
+button:hover,
+button:focus-visible {
+  background-color: #5c7160;  
 }
 
 .cartButton {
@@ -125,6 +135,7 @@ button:hover {
   flex-direction: column;
   padding: 20px 0px;
   align-items: center;
+  justify-content: center;
 }
 
 .productItem {
@@ -141,4 +152,24 @@ button:hover {
 
 .productButton {
   width: 100%;
+}
+
+@media (max-width: 600px) {
+
+    header {
+      height: 30vh;
+    }
+
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    h2 {
+      font-size: 1.25rem;
+    }
+
+    .cartItemInfo {
+      font-size: 1rem;
+    }
+    
 }

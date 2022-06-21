@@ -59,7 +59,7 @@ const Cart = (props) => {
 
                             <li key={`${plant.key}-${index}`} className="cartItem">
                                 <img className="cartImage" src={plant.photo} alt= {`a {plant.name}`}/> 
-                                <h3>{plant.name} - CAD ${plant.price}.00</h3>
+                                <h3 className="cartItemInfo">{plant.name} - CAD ${plant.price}.00</h3>
                             </li>
 
                             )
