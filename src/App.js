@@ -18,7 +18,6 @@ function App() {
 
     onValue(dbRef, (response) => {
 
-      // console.log (response.val());
       const newState = [];
 
       const data = response.val();

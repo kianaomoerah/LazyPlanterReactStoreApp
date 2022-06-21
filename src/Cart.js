@@ -53,11 +53,11 @@ const Cart = (props) => {
 
                 {
                     isDisplayed
-                        ? cart.map((plant) => {
+                        ? cart.map((plant, index) => {
 
                             return (
 
-                            <li key={plant.key} className="cartItem">
+                            <li key={`${plant.key}-${index}`} className="cartItem">
                                 <img className="cartImage" src={plant.photo} alt= {`a {plant.name}`}/> 
                                 <h3>{plant.name} - CAD ${plant.price}.00</h3>
                             </li>
