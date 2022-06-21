@@ -6,6 +6,7 @@ import firebase from './firebase.js';
 import Header from './Header';
 import Inventory from './Inventory';
 import Cart from './Cart';
+import Footer from './Footer';
 
 function App() {
 
@@ -58,6 +59,7 @@ function App() {
         <Header />
         <Cart cart={cart} setCart={setCart} cartTotal ={cartTotal} setCartTotal={setCartTotal}/>
         <Inventory plants={plants} addToCart={addToCart} cart={cart}/>   
+        <Footer />
       </>
   );
 }
