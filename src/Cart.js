@@ -3,7 +3,7 @@ import Inventory from './Inventory';
 
 const Cart = (props) => {
 
-    const { cart } = props
+    const { cart, setCart, setCartTotal } = props
 
     const [ isDisplayed, setIsDisplayed ] = useState(false)
 
@@ -14,6 +14,14 @@ const Cart = (props) => {
 
     
     // a function that will update the state of the cart component from displayed to not displayed 
+
+    const clearCart = () => {
+
+        setCart([])
+
+        setCartTotal(0)
+
+    }
     
     const handleClick = () => {
 
@@ -30,14 +38,28 @@ const Cart = (props) => {
                         : "Show Cart"
                 }
             </button>
+
+            <button onClick={clearCart}>Clear Cart</button>
+            <ul>
+
                 {
                     isDisplayed
                         ? cart.map((plant) => {
 
-                            return <Inventory />
+                            return (
+
+                            <>
+                                <li key={plant.key} className="cartItem">
+                                    <h2>{plant.name}</h2>
+                                    <img src={plant.photo} alt= {`a {plant.name}`}/>
+                                </li>
+                            </>
+
+                            )
                         })
-                        : <p>Click here to view your cart</p>
+                        : null
                 }
+             </ul>    
         </section>
     )
 

@@ -41,22 +41,20 @@ function App() {
   // useState for the number of items in cart
   const [ cartTotal, setCartTotal ] = useState(0)
 
-  const addToCart = (e) => {
-
-        // if (plantStock > 0) {
-
-        //     setPlantStock(plantStock - 1)
+  const addToCart = (plantName) => {
 
             setCartTotal(cartTotal + 1)
 
             // create a copy of the array in state so that we do not alter our original array
             const copyOfCart = [...cart];
 
-            copyOfCart.push(e.target)
+            // copyOfCart.push(e.target)
+
+            copyOfCart.push(plantName)
 
             setCart(copyOfCart);
 
-            console.log(e);
+            // console.log(e);
 
             
         }
@@ -78,8 +76,8 @@ function App() {
   return (
       <>
         <Header />
-        <Cart />
         <p>{cartTotal}</p>
+        <Cart cart={cart} setCart={setCart} setCartTotal={setCartTotal}/>
         <ul>
           <Inventory plants={plants} addToCart={addToCart} cart={cart}/>        
         </ul>
