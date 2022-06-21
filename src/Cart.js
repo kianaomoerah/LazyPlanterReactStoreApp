@@ -1,9 +1,8 @@
 import { useState } from 'react';
-import Inventory from './Inventory';
 
 const Cart = (props) => {
 
-    const { cart, setCart, setCartTotal } = props
+    const { cart, setCart, cartTotal, setCartTotal } = props
 
     const [ isDisplayed, setIsDisplayed ] = useState(false)
 
@@ -30,8 +29,15 @@ const Cart = (props) => {
 
     return (
 
-        <section>
-            <button onClick = {handleClick}>
+        <section className="cart">
+
+            <div className="cartContainer">
+                <p>Items in Cart: {cartTotal}</p>
+            </div>
+
+            <div>
+
+            <button className = "cartButton" onClick = {handleClick}>
                 {
                     isDisplayed
                         ? "Hide Cart"
@@ -39,8 +45,11 @@ const Cart = (props) => {
                 }
             </button>
 
-            <button onClick={clearCart}>Clear Cart</button>
-            <ul>
+            <button className = "cartButton" onClick={clearCart}>Clear Cart</button>
+            </div>
+
+
+            <ol className="cartList">
 
                 {
                     isDisplayed
@@ -48,40 +57,19 @@ const Cart = (props) => {
 
                             return (
 
-                            <>
-                                <li key={plant.key} className="cartItem">
-                                    <h2>{plant.name}</h2>
-                                    <img src={plant.photo} alt= {`a {plant.name}`}/>
-                                </li>
-                            </>
+                            <li key={plant.key} className="cartItem">
+                                <img className="cartImage" src={plant.photo} alt= {`a {plant.name}`}/> 
+                                <h3>{plant.name} - CAD ${plant.price}.00</h3>
+                            </li>
 
                             )
                         })
                         : null
                 }
-             </ul>    
+             </ol>    
         </section>
     )
 
 }
 
 export default Cart;
-
-
-
-// const Cart = (props) => {
-
-//     const {cart, setCart} = props
-
-//     return (
-//         <>
-//             {/* <div>{props.cartTotal}</div> */}
-//             <p>oooo nice cart</p>
-//             <p>{cart.length}</p>
-//             <button>Go to Cart</button>
-//         </>
-
-//     )
-// }
-
-// export default Cart;
