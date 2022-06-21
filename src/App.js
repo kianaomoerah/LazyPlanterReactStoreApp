@@ -1,11 +1,11 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import {useEffect, useState} from 'react';
 import {getDatabase, ref, onValue} from 'firebase/database'
 import firebase from './firebase.js';
 import Header from './Header';
 import Inventory from './Inventory';
-// import Cart from './Cart';
+import Cart from './Cart';
 
 function App() {
 
@@ -32,19 +32,40 @@ function App() {
     })
   }, [])
 
-  const [cartTotal, setCartTotal ] = useState(0)
+ 
+  // useState for cart array
+  const [cart, setCart ] = useState([])
 
-  const [plantStock, setPlantStock] = useState("10")
+  // const [plantStock, setPlantStock] = useState("10")
 
-  const addToCart = () => {
+  // useState for the number of items in cart
+  const [ cartTotal, setCartTotal ] = useState(0)
 
-        if (plantStock > 0) {
+  const addToCart = (e) => {
 
-            setPlantStock(plantStock - 1)
+        // if (plantStock > 0) {
+
+        //     setPlantStock(plantStock - 1)
 
             setCartTotal(cartTotal + 1)
+
+            // create a copy of the array in state so that we do not alter our original array
+            const copyOfCart = [...cart];
+
+            copyOfCart.push(e.target)
+
+            setCart(copyOfCart);
+
+            console.log(e);
+
+            
         }
-    }
+
+        // console.log("added to cart")
+
+        // setCart([...cart, plant])
+        
+    
 
   // const addToCart = () => {
 
@@ -57,10 +78,10 @@ function App() {
   return (
       <>
         <Header />
-        {/* <Cart /> */}
+        <Cart />
         <p>{cartTotal}</p>
         <ul>
-          <Inventory plants={plants} addToCart={addToCart} />        
+          <Inventory plants={plants} addToCart={addToCart} cart={cart}/>        
         </ul>
       </>
   );
