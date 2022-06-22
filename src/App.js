@@ -1,4 +1,3 @@
-// import logo from './logo.svg';
 import './App.css';
 import {useEffect, useState} from 'react';
 import {getDatabase, ref, onValue} from 'firebase/database'
@@ -32,26 +31,19 @@ function App() {
     })
   }, [])
 
- 
-  // useState for cart array
   const [cart, setCart ] = useState([])
 
-  // const [plantStock, setPlantStock] = useState("10")
-
-  // useState for the number of items in cart
   const [ cartTotal, setCartTotal ] = useState(0)
 
   const addToCart = (plantName) => {
 
             setCartTotal(cartTotal + 1)
 
-            // create a copy of the array in state so that we do not alter our original array
             const copyOfCart = [...cart];
 
             copyOfCart.push(plantName)
 
-            setCart(copyOfCart);
-                        
+            setCart(copyOfCart);            
         }
 
   return (
