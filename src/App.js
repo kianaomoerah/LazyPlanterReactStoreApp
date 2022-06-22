@@ -1,24 +1,58 @@
-import logo from './logo.svg';
 import './App.css';
+import {useEffect, useState} from 'react';
+import {getDatabase, ref, onValue} from 'firebase/database'
+import firebase from './firebase.js';
+import Header from './Header';
+import Inventory from './Inventory';
+import Cart from './Cart';
+import Footer from './Footer';
 
 function App() {
+
+  const [plants, setPlants] = useState([]);
+
+  useEffect(()=> {
+
+    const database = getDatabase(firebase)
+    const dbRef = ref(database)
+
+    onValue(dbRef, (response) => {
+
+      const newState = [];
+
+      const data = response.val();
+
+      for (let key in data) {
+
+        newState.push({key: key, name: data[key].name, photo: data[key].photo, price: data[key].price, stock: data[key].stock })
+      }
+          setPlants(newState)
+      
+    })
+  }, [])
+
+  const [cart, setCart ] = useState([])
+
+  const [ cartTotal, setCartTotal ] = useState(0)
+
+  const addToCart = (plant) => {
+
+            setCartTotal(cartTotal + 1)
+
+            const copyOfCart = [...cart];
+
+            copyOfCart.push(plant)
+
+            setCart(copyOfCart);            
+        }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <>
+        <Header />
+        <Cart cart={cart} setCart={setCart} cartTotal ={cartTotal} setCartTotal={setCartTotal}/>
+        <Inventory plants={plants} addToCart={addToCart} cart={cart}/>   
+        <Footer />
+      </>
   );
 }
 
