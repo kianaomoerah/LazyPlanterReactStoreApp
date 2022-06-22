@@ -35,13 +35,13 @@ function App() {
 
   const [ cartTotal, setCartTotal ] = useState(0)
 
-  const addToCart = (plantName) => {
+  const addToCart = (plant) => {
 
             setCartTotal(cartTotal + 1)
 
             const copyOfCart = [...cart];
 
-            copyOfCart.push(plantName)
+            copyOfCart.push(plant)
 
             setCart(copyOfCart);            
         }

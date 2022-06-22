@@ -49,10 +49,6 @@ header {
   align-items: center;
 }
 
-h2 {
-  color: #c9b9a4;
-}
-
 h1 {
   margin: 0;
   font-size: 4rem;
@@ -61,6 +57,7 @@ h1 {
 }
 
 h2 {
+  color: #c9b9a4;
   font-size: 1.5rem;
   font-family: 'Roboto Mono', monospace;
   text-align: center;
