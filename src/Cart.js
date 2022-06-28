@@ -17,6 +17,8 @@ const Cart = (props) => {
     const handleClick = () => {
 
         setIsDisplayed(!isDisplayed)
+
+
     }
 
     return (
@@ -30,7 +32,7 @@ const Cart = (props) => {
             <div>
                 <button className = "cartButton" onClick = {handleClick}>
                     {
-                        isDisplayed
+                        isDisplayed 
                             ? "Hide Cart"
                             : "Show Cart"
                     }
@@ -42,20 +44,26 @@ const Cart = (props) => {
             <ol className="cartList">
 
                 {
-                    isDisplayed
-                        ? cart.map((plant, index) => {
-
-                            return (
-
-                            <li key={`${plant.key}-${index}`} className="cartItem">
-                                <img className="cartImage" src={plant.photo} alt= {`a {plant.name}`}/> 
-                                <h3 className="cartItemInfo">{plant.name} - CAD ${plant.price}.00</h3>
-                            </li>
-
-                                )
-                            })
-                        : null
+                   isDisplayed && cart.length == 0
+                    ? <p> Your cart is empty, add a new plant friend!</p>
+                    : null 
                 }
+                {
+                    isDisplayed && cart.length > 0
+
+                    ? cart.map((plant, index) => {
+                        return (
+
+                        <li key={`${plant.key}-${index}`} className="cartItem">
+                            <img className="cartImage" src={plant.photo} alt= {`a {plant.name}`}/> 
+                            <h3 className="cartItemInfo">{plant.name} - CAD ${plant.price}.00</h3>
+                        </li>
+
+                            )
+                        })
+                        
+                    :null
+                }                
              </ol>    
         </section>
     )
