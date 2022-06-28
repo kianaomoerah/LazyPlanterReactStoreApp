@@ -134,6 +134,12 @@ button:focus-visible {
   justify-content: center;
 }
 
+.scrollButton{
+  position: fixed;
+  right: 5px;
+  top: 60%;
+}
+
 .productItem {
   display: flex;
   flex-direction: column;

@@ -18,7 +18,6 @@ const Cart = (props) => {
 
         setIsDisplayed(!isDisplayed)
 
-
     }
 
     return (
@@ -44,7 +43,7 @@ const Cart = (props) => {
             <ol className="cartList">
 
                 {
-                   isDisplayed && cart.length == 0
+                   isDisplayed && cart.length === 0
                     ? <p> Your cart is empty, add a new plant friend!</p>
                     : null 
                 }
