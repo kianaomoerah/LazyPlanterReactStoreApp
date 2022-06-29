@@ -31,6 +31,13 @@ function App() {
     })
   }, [])
 
+  const handleScroll = () => {
+    window.scrollTo({
+      top: 0,
+      behaviour: 'smooth'
+    });
+  };
+
   const [cart, setCart ] = useState([])
 
   const [ cartTotal, setCartTotal ] = useState(0)
@@ -50,6 +57,7 @@ function App() {
       <>
         <Header />
         <Cart cart={cart} setCart={setCart} cartTotal ={cartTotal} setCartTotal={setCartTotal}/>
+        <button onClick={handleScroll} className="scrollButton">↑</button>
         <Inventory plants={plants} addToCart={addToCart} cart={cart}/>   
         <Footer />
       </>
