@@ -60,6 +60,9 @@ const [plants, setPlants] = useState([]);
                 <li>
                     <Link to="/water">Watering Your Plants</Link>
                 </li>
+                <li>
+                    <Link to="/light">Light For Your Indoor Plants</Link>
+                </li>
             </ul>
         </nav>
         <Cart cart={cart} setCart={setCart} cartTotal ={cartTotal} setCartTotal={setCartTotal}/>
