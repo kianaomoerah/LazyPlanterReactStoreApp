@@ -479,6 +479,8 @@ const Light = () => {
                             <em>Please note this guide is for people living in the Northern Hemisphere. If you live south of the equator, you'll need to invert this guide from a direction standpoint.</em>
                         </strong>
                     </p>
+
+                      <p>** Information provided by Promise Supply at promisesupply.ca</p>
                     
                    
         </>

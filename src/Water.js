@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const Water = () => {
 
     return (
@@ -139,6 +141,8 @@ const Water = () => {
                     <p>Plants in a garden are a bit different. When it comes to garden plants, you should look at what they each need. There is a massive difference between watering your tropicals outside and growing fruits and vegetables.</p>
                     <h2>Bringing it all together - the final answer on how to water your plants</h2>
                     <p>It still depends on a number of factors, of course. No two homes are the same after all. Hopefully, this short guide provides you with the knowledge and skills to make your plants thrive in your home.</p>
+
+                   <p>Information provided by Promise Supply at promisesupply.ca</p>
         </>
     )
 }
