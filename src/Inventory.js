@@ -28,7 +28,6 @@ const Inventory = (props) => {
 
                     })
                 }
-
                 </ul>
         </div>
     )

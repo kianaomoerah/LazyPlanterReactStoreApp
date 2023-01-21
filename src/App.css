@@ -134,6 +134,14 @@ button:focus-visible {
   justify-content: center;
 }
 
+.scrollButton{
+  position: fixed;
+  right: 5px;
+  top: 60%;
+  background-color: grey;
+  z-index: 2;
+}
+
 .productItem {
   display: flex;
   flex-direction: column;
@@ -142,7 +150,7 @@ button:focus-visible {
   height: 600px;
   list-style: none;
   border: 1px solid #1e180c;
-  margin: 50px;
+  margin: 37px 25px;
   background-color: #fefae0;
 }
 
