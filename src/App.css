@@ -75,7 +75,6 @@ p {
   margin: 5px 0px;
 }
 
-/* fix */
 span {
   font-style: italic;
 }
@@ -173,15 +172,37 @@ footer {
   font-weight: bold;
 }
 
-a {
+.footerLink {
   color:#1e180c;
+}
+
+.careGuideLink {
+  font-size: 1.5rem;
+  color:white;
+  text-decoration: none;
+  margin: 20px 5px 35px 5px;
+  display: inline-block;
+  padding: 20px;
+  background: black;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.careGuideLink:hover {
+  background-color: #5c7160;
 }
 
 .careGuide {
   max-width: 1200px;
   width: 90%;
   margin: 3rem auto; 
+}
+
+.siteBio {
   line-height: 1.8rem;
+  font-family: 'Roboto Mono', monospace;
+  text-align: center;
+  border: 2px black solid;
+  padding: 25px;
 }
 
 .careGuide h1 {

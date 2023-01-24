@@ -3,6 +3,7 @@ import {useEffect, useState} from 'react';
 import {getDatabase, ref, onValue} from 'firebase/database'
 import { Link } from 'react-router-dom';
 import firebase from './firebase.js';
+import SiteBio from './SiteBio';
 import Inventory from './Inventory';
 import Cart from './Cart';
 
@@ -55,13 +56,14 @@ const [plants, setPlants] = useState([]);
 
   return (
       <>
+        <SiteBio />
         <nav>
-            <ul>
+            <ul className="careGuideContainer">
                 <li>
-                    <Link to="/water">Watering Your Plants</Link>
+                    <Link className="careGuideLink" to="/water">Watering Your Plants</Link>
                 </li>
                 <li>
-                    <Link to="/light">Light For Your Indoor Plants</Link>
+                    <Link className="careGuideLink" to="/light">Light For Your Plants</Link>
                 </li>
             </ul>
         </nav>
