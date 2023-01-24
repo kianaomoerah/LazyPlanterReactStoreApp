@@ -75,6 +75,7 @@ p {
   margin: 5px 0px;
 }
 
+/* fix */
 span {
   font-style: italic;
 }
@@ -174,6 +175,51 @@ footer {
 
 a {
   color:#1e180c;
+}
+
+.careGuide {
+  max-width: 1200px;
+  width: 90%;
+  margin: 3rem auto; 
+  line-height: 1.8rem;
+}
+
+.careGuide h1 {
+  text-align: center;
+  margin: 30px auto 45px auto;
+}
+
+.careGuide h2 {
+margin: 30px 0;
+}
+
+.careGuide h3 {
+  margin: 20px 0;
+}
+
+.careGuide p + li {
+  line-height: 1.8rem;
+  margin: 10px;
+}
+
+.careGuide ul {
+  display: block;
+  list-style-type: disc;
+  font-family: 'Padauk', sans-serif;
+}
+
+.careGuide ol {
+  font-family: 'Padauk', sans-serif;
+}
+
+p > strong {
+  display:block;
+  margin: 15px 0;
+}
+
+.disclaimer {
+  font-style: italic;
+  margin-top: 3rem;
 }
 
 @media (max-width: 600px) {

@@ -1,11 +1,11 @@
-import { Link } from 'react-router-dom';
-
 const Water = () => {
 
     return (
 
-        <>
-                                <p>
+        <body className="careGuide">
+
+            <h1>Watering your Plants</h1>
+                    <p>
                         Usually, the first question we ask ourselves when buying a plant is 
                         <strong>how often should I water this plant?</strong>
                     </p>
@@ -18,7 +18,7 @@ const Water = () => {
                         <li>The weight of your pot is the fastest way to know if your plant needs more water. If it's getting light you are safe to water.</li>
                         <li>When you want your plants to soak them, let the water drain out and then leave them alone.</li>
                     </ol>
-                    <h2>The Long Answer: Watering Plants Correctly Depends on Lots of Factors</h2>
+                    <h2>The Long Answefr: Watering Plants Correctly Depends on Lots of Factors</h2>
                     <p>
                         Most people recommend a set number of days between watering because it's easier to remember and follow. But, the correct answer is more complex - 
                         <strong>it depends. </strong>
@@ -29,7 +29,7 @@ const Water = () => {
                         <strong>how do I water houseplants and indoor plants.</strong>
                          Many tried and tested ways to ensure that your houseplants or office plants are happy and thriving.
                     </p>
-                    <h3>Three import questions to water correctly:</h3>
+                    <h3>Three important questions to water correctly:</h3>
                     <ul>
                         <li>How much do I need to water them?</li>
                         <li>Is Toronto's tap water fine for my plants?</li>
@@ -41,8 +41,7 @@ const Water = () => {
                     <p>Most houseplants we grow in our homes come from the tropics. With microclimates that range from deserts to rainforests, plants come from different places with varying conditions.</p>
                     <p>All we need to do in our homes is give them the amount of water they would have received in their natural environment. If they are potted correctly, most plants can be watered about once a week without causing damage as long as your pot has drainage. If you forget, you'll notice before it's too late. </p>
                     <p>Watering based on the plant's needs is much easier than on a fixed schedule. Since conditions vary from home to home, monitoring your plant and deciding when to water it is highly recommended.</p>
-                    <h3>
-                        <strong>Intuitive ways to water your plants:</strong>
+                    <h3>Intuitive ways to water your plants:
                     </h3>
                     <p>
                         <strong>Lift the pot. </strong>
@@ -70,9 +69,7 @@ const Water = () => {
                     <p>Make sure the first few inches of soil are dry before watering or that it is 50-60% lighter than when you last watered it.</p>
                     <p>These plants fall in the middle of the spectrum - not too demanding, but do not tolerate neglect. They like to be watered when 1-2 inches of dry soil.</p>
                     <p>Plants that need this watering schedule include: Fiddle Leaf Figs, Monsteras, Peperomias, Money Trees, and Begonias want to dry out partially between watering.</p>
-                    <p>
-                        <strong>3. Plants that want to dry out entirely between watering</strong>
-                    </p>
+                    <h3>3. Plants that want to dry out entirely between watering</h3>
                     <p>Wait for them to be completely dry before watering when you lift them up the pot should feel empty inside.</p>
                     <p>These plants are the least demanding. They like the soil to dry out in between watering. Cacti, Succulents, Dracaena, Sansevieria, and ZZ plants are prime examples of this type of plant.</p>
                     <h2>Factor # 2: How does lighting affect my watering schedule?</h2>
@@ -100,8 +97,7 @@ const Water = () => {
                         </li>
                     </ol>
                     <h2>How to Top Water Your Plants</h2>
-                    <h3>
-                        <strong>Water your plants until water comes out of the drainage holes. </strong>
+                    <h3>Water your plants until water comes out of the drainage holes.
                     </h3>
                     <p>Ensure that the entire container gets saturated with water to help promote plant growth. This is important during the growth period when roots develop and grow. To water deeply, water slowly across the soil's surface.</p>
                     <p>Once the water has drained through, empty any excess water within 30 minutes to an hour. Do not let your plants sit in a tray of water for multiple days. This leads to root rot, and it can attract fungus, mold, and pests that might kill the plant.</p>
@@ -135,15 +131,15 @@ const Water = () => {
                     <p>Moisture meters are available at most garden stores and typically cost less than $20</p>
                     <p>When using a moisture meter, insert the prongs into the soil and wait a few seconds for it to give you a reading. The higher the number, the wetter the soil is.</p>
                     <p>If you're not sure if your plant needs watering, stick the prongs of the moisture meter into the soil and give it a reading. If the number is high, then your plant doesn't need water; if the number is low, your plant needs water. A moisture meter can be helpful, but it's not a necessary tool - you can also use your senses to determine if a plant needs water.</p>
-                    <h1>What about watering outdoor plants?</h1>
+                    <h2>What about watering outdoor plants?</h2>
                     <p>This guide primarily focuses on watering indoor plants. Watering your container plants outdoors isn't much different. That said, when plants are in the ground, they can pull moisture up with their roots.</p>
                     <p>So when it comes to watering your plants in containers outside, you should take the above advice. Because the light is more intense outdoors, you likely will have to water these plants more often, but you should be just as diligent with making sure your pots drain.</p>
                     <p>Plants in a garden are a bit different. When it comes to garden plants, you should look at what they each need. There is a massive difference between watering your tropicals outside and growing fruits and vegetables.</p>
                     <h2>Bringing it all together - the final answer on how to water your plants</h2>
                     <p>It still depends on a number of factors, of course. No two homes are the same after all. Hopefully, this short guide provides you with the knowledge and skills to make your plants thrive in your home.</p>
 
-                   <p>Information provided by Promise Supply at promisesupply.ca</p>
-        </>
+                   <p className="disclaimer">** Information provided by Promise Supply at promisesupply.ca</p>
+        </body>
     )
 }
 
