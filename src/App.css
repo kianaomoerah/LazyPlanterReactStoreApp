@@ -176,6 +176,19 @@ footer {
   color:#1e180c;
 }
 
+.backLink {
+  color: white;
+  text-decoration: none;
+  background: black;
+  font-family: 'Roboto Mono', monospace;
+  padding: 5px
+}
+
+.backLink:hover,
+.backLink:focus-visible {
+  background-color: #5c7160;
+}
+
 .careGuideLink {
   font-size: 1.5rem;
   color:white;
@@ -187,7 +200,8 @@ footer {
   font-family: 'Roboto Mono', monospace;
 }
 
-.careGuideLink:hover {
+.careGuideLink:hover,
+.careGuideLink:focus-visible {
   background-color: #5c7160;
 }
 

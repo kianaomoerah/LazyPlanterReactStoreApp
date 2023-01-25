@@ -1,9 +1,15 @@
+import { Link } from 'react-router-dom';
+
 const Light = () => {
 
     return (
-        <body className="careGuide">
+
+        <main className="careGuide">
+
+            <Link className="backLink" to="/">← Back to Home</Link>
 
             <h1> Light for your Indoor Plants</h1>
+
               <p>Different plants need different amounts of light. For example, cacti like to sit in a spot with a lot of light, while small and trailing plants prefer to be in a shadier spot.</p>
               <p>This guide is a brief overview of the relationship between light and houseplants. It discusses some essential concepts about light, like how</p>
                     <h2>The Quick Guide To Three Main Types of Light</h2>
@@ -448,7 +454,7 @@ const Light = () => {
                       <p className="disclaimer">** Information provided by Promise Supply at promisesupply.ca</p>
                     
                    
-        </body>
+        </main>
     )
 
 }

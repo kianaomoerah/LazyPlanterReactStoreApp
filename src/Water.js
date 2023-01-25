@@ -1,8 +1,12 @@
+import { Link } from 'react-router-dom';
+
 const Water = () => {
 
     return (
 
-        <body className="careGuide">
+        < main className="careGuide">
+
+            <Link className="backLink" to="/">← Back to Home</Link>
 
             <h1>Watering your Plants</h1>
                     <p>
@@ -139,7 +143,7 @@ const Water = () => {
                     <p>It still depends on a number of factors, of course. No two homes are the same after all. Hopefully, this short guide provides you with the knowledge and skills to make your plants thrive in your home.</p>
 
                    <p className="disclaimer">** Information provided by Promise Supply at promisesupply.ca</p>
-        </body>
+        </main>
     )
 }
 
