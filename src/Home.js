@@ -25,7 +25,7 @@ const [plants, setPlants] = useState([]);
 
       for (let key in data) {
 
-        newState.push({key: key, name: data[key].name, photo: data[key].photo, price: data[key].price, stock: data[key].stock })
+        newState.push({key: key, name: data[key].name, photo: data[key].photo, price: data[key].price, stock: data[key].stock, sun: data[key].sun, water: data[key].water })
       }
           setPlants(newState)
       
