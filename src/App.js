@@ -1,64 +1,28 @@
 import './App.css';
-import {useEffect, useState} from 'react';
-import {getDatabase, ref, onValue} from 'firebase/database'
-import firebase from './firebase.js';
+import { Routes, Route } from 'react-router-dom';
 import Header from './Header';
-import Inventory from './Inventory';
-import Cart from './Cart';
 import Footer from './Footer';
+import Home from './Home';
+import Water from './Water';
+import Light from './Light';
 
 function App() {
 
-  const [plants, setPlants] = useState([]);
-
-  useEffect(()=> {
-
-    const database = getDatabase(firebase)
-    const dbRef = ref(database)
-
-    onValue(dbRef, (response) => {
-
-      const newState = [];
-
-      const data = response.val();
-
-      for (let key in data) {
-
-        newState.push({key: key, name: data[key].name, photo: data[key].photo, price: data[key].price, stock: data[key].stock })
-      }
-          setPlants(newState)
-      
-    })
-  }, [])
-
-  const handleScroll = () => {
+    const handleScroll = () => {
     window.scrollTo({
       top: 0,
       behaviour: 'smooth'
     });
   };
 
-  const [cart, setCart ] = useState([])
-
-  const [ cartTotal, setCartTotal ] = useState(0)
-
-  const addToCart = (plant) => {
-
-            setCartTotal(cartTotal + 1)
-
-            const copyOfCart = [...cart];
-
-            copyOfCart.push(plant)
-
-            setCart(copyOfCart);            
-        }
-
   return (
       <>
         <Header />
-        <Cart cart={cart} setCart={setCart} cartTotal ={cartTotal} setCartTotal={setCartTotal}/>
-        <button onClick={handleScroll} className="scrollButton">↑</button>
-        <Inventory plants={plants} addToCart={addToCart} cart={cart}/>   
+        <Routes>
+          <Route path="/" element={ <Home handleScroll={handleScroll}/> } />
+          <Route path="/water" element ={ <Water handleScroll={handleScroll}/>} />
+          <Route path="/light" element ={ <Light handleScroll={handleScroll}/> } />
+        </Routes>
         <Footer />
       </>
   );
