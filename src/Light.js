@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-const Light = () => {
+const Light = (prop) => {
 
     return (
 
@@ -452,6 +452,7 @@ const Light = () => {
                     </p>
 
                       <p className="disclaimer">** Information provided by Promise Supply at promisesupply.ca</p>
+                       <button onClick={prop.handleScroll} className="scrollButton">↑</button>
                     
                    
         </main>

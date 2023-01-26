@@ -7,7 +7,7 @@ import SiteBio from './SiteBio';
 import Inventory from './Inventory';
 import Cart from './Cart';
 
-const Home = () => {
+const Home = (prop) => {
 
 
 const [plants, setPlants] = useState([]);
@@ -31,13 +31,6 @@ const [plants, setPlants] = useState([]);
       
     })
   }, [])
-
-  const handleScroll = () => {
-    window.scrollTo({
-      top: 0,
-      behaviour: 'smooth'
-    });
-  };
 
   const [cart, setCart ] = useState([])
 
@@ -68,7 +61,7 @@ const [plants, setPlants] = useState([]);
             </ul>
         </nav>
         <Cart cart={cart} setCart={setCart} cartTotal ={cartTotal} setCartTotal={setCartTotal}/>
-        <button onClick={handleScroll} className="scrollButton">↑</button>
+        <button onClick={prop.handleScroll} className="scrollButton">↑</button>
         <Inventory plants={plants} addToCart={addToCart} cart={cart}/>   
       </>
   );

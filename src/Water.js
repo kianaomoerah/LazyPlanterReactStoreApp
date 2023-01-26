@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-const Water = () => {
+const Water = (prop) => {
 
     return (
 
@@ -143,6 +143,7 @@ const Water = () => {
                     <p>It still depends on a number of factors, of course. No two homes are the same after all. Hopefully, this short guide provides you with the knowledge and skills to make your plants thrive in your home.</p>
 
                    <p className="disclaimer">** Information provided by Promise Supply at promisesupply.ca</p>
+                   <button onClick={prop.handleScroll} className="scrollButton">↑</button>
         </main>
     )
 }
