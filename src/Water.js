@@ -22,7 +22,7 @@ const Water = (prop) => {
                         <li>The weight of your pot is the fastest way to know if your plant needs more water. If it's getting light you are safe to water.</li>
                         <li>When you want your plants to soak them, let the water drain out and then leave them alone.</li>
                     </ol>
-                    <h2>The Long Answefr: Watering Plants Correctly Depends on Lots of Factors</h2>
+                    <h2>The Long Answer: Watering Plants Correctly Depends on Lots of Factors</h2>
                     <p>
                         Most people recommend a set number of days between watering because it's easier to remember and follow. But, the correct answer is more complex - 
                         <strong>it depends. </strong>
